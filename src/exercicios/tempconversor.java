@@ -15,8 +15,8 @@ public class tempconversor{
         final double ajuste = 32;
         double Fahreinheit = 104;
         double Celcius = (Fahreinheit-ajuste)*Fator;
-        System.out.println(Celcius);
-    
+        System.out.println(Fahreinheit);
+        
     }
     
     
