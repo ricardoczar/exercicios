@@ -1,6 +1,5 @@
 package exercicios;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class ExerciciosConversao {
@@ -9,22 +8,20 @@ public class ExerciciosConversao {
 
         //Scanner ira receber as informações em String. Independente se haja . ou , o valor numérico.
 
-        Locale.setDefault(new Locale("en", "US"));
-
         Scanner salario = new Scanner(System.in);
         System.out.println("digite o primeiro salario");
-        String salario1 = salario.next();
+        String salario1 = salario.next().replace (",",".");
         System.out.println("digite o segundo salario");
-        String salario2 = salario.next();
+        String salario2 = salario.next().replace (",",".");
         System.out.println("digite o terceiro salario");
-        String salario3 = salario.next();
+        String salario3 = salario.next().replace (",",".");
 
         //Convertendo String para Double e usando replace para transformar , em . para que não ocorra erros na divisão.
 
 
-        double num1 = Double.parseDouble(salario1.replace (",","."));
-        double num2 = Double.parseDouble(salario2.replace (",","."));
-        double num3 = Double.parseDouble(salario3.replace (",","."));
+        double num1 = Double.parseDouble(salario1);
+        double num2 = Double.parseDouble(salario2);
+        double num3 = Double.parseDouble(salario3);
 
         double media = num1 + num2 + num3;
         double resultado = media/3;
